@@ -22,24 +22,9 @@ export default defineConfig({
         orientation: 'portrait',
         scope: process.env.BASE || '/',
         start_url: process.env.BASE || '/',
-        icons: [
-          {
-            src: 'pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png'
-          },
-          {
-            src: 'pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable'
-          }
-        ]
+        // PWA 아이콘 (파일 생성 후 주석 해제)
+        // 아이콘 생성: scripts/create-default-icons.html 파일을 브라우저에서 열어서 생성
+        icons: []
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg}'],
